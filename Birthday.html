@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #messages{
+            font-size: 24px;
+            margin-top: 50px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #flowers{
+            font-size: 50px;
+            margin-top: 30px;
+        }
+
+        .heart{
+            color: red;
+            position: absolute;
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat{
+            0%{
+                transform: scale(0.75);
+            }
+            20%{
+                transform: scale(1);
+            }
+            40%{
+                transform: scale(0.75);
+            }
+            60%{
+                transform: scale(1);
+            }
+            80%{
+                transform: scale(0.75);
+            }
+            100%{
+                transform: scale(0.75);
+            }
+        }
+    </style>
+</head>
+<body style="background-color: black; color: white;">
+    <div id="messages">
+        <div class="message">I know that I don't have the right to wish you a happy birthday</div>
+        <div class="message">I'm not going to do it</div>
+        <div class="message">I am just happy that you were born on this day</div>
+        <div class="message">Line (Ma Linette)</div>
+    </div>
+    <div id="flowers">
+        <span class="heart">🌸</span>
+        <span class="heart" style="top: 20px; left: 50px;">&hearts;</span>
+        <span class="heart" style="top: 40px; left: 100px;">🌸</span>
+        <span class="heart" style="top: 60px; left: 200px;">&hearts;</span>
+        <span class="heart" style="top: 20px; right: 50px;">&hearts;</span>
+        <span class="heart" style="top: 40px; right: 100px;">🌸</span>
+        <span class="heart" style="top: 60px; right: 200px;">&hearts;</span>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementById("messages").style.opacity = "1";
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
